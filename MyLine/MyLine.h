@@ -11,6 +11,7 @@ public:
 	}
 	void line(int asterisco);
 	void repetir(int hasta);
+	void asterisco2(int asterisco2);
 protected:
 	//______ Wintempla GUI manager section begin: DO NOT EDIT AFTER THIS LINE
 	Win::Textbox tbxSalida;

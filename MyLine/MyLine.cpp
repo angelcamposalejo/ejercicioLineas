@@ -13,21 +13,24 @@ void MyLine::Window_Open(Win::Event& e)
 void MyLine::line(int asterisco)
 {
 	wstring texto;
-	for (int i = 0; i < 4; i++)
+	for (int i = asterisco; i >= 1; i--)
 	{
-		Sys::Format(texto, L"%s", "*");
+		for (int n = i; n >= 1; n--)
+		{
+			Sys::Format(texto, L"%s", "*");
+			tbxSalida.Text += texto;
+		}
+		Sys::Format(texto, L"\r\n");
 		tbxSalida.Text += texto;
 	}
-	Sys::Format(texto, L"\r\n");
-	tbxSalida.Text += texto;
+	//Sys::Format(texto, L"\r\n");
+	//tbxSalida.Text += texto;
 }
 void MyLine::repetir(int hasta)
 {
-	for (int j = 0; j < hasta; j++)
-	{
-		line(4);
-	}
+	line(hasta);
 }
+
 
 void MyLine::btCalcular_Click(Win::Event& e)
 {
