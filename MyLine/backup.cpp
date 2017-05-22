@@ -17,10 +17,14 @@ void MyLine::line(int asterisco)
 	wstring texto;
 	for (int i = 0; i < asterisco; i++)
 	{
-		Sys::Format(texto,L"%s","*");
+		Sys::Format(texto, L"%s", "*");
 		tbxSalida.Text += texto;
 	}
 	Sys::Format(texto, L"\r\n");
 	tbxSalida.Text += texto;
+}
+
+void MyLine::btCalcular_Click(Win::Event& e)
+{
 }
 
